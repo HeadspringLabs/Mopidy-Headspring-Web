@@ -4,7 +4,7 @@ include AUTHORS
 include LICENSE
 include MANIFEST.in
 include README.rst
-include mopidy_musicbox_webclient/ext.conf
+include mopidy_headspring_web/ext.conf
 
-recursive-include mopidy_musicbox_webclient/static *
+recursive-include mopidy_headspring_web/static *
 recursive-include tests *.py

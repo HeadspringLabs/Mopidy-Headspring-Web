@@ -1,5 +1,5 @@
 /**
- * @author Wouter van Wijk
+ * @author Headspring Labs
  *
  * these functions communication with ws server
  *

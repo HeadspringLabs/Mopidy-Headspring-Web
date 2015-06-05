@@ -2,7 +2,7 @@
 Mopidy-Headspring-Web
 *************************
 
-We love the `Mopidy MusicBox Webclient <https://github.com/woutervanwijk/Mopidy-MusicBox-Webclient>`_ by `woutervanwijk <https://github.com/woutervanwijk/>`_, and use it all the time to play music in our office.
+We love the `Mopidy MusicBox Webclient <https://github.com/woutervanwijk/Mopidy-Headspring-Web>`_ by `woutervanwijk <https://github.com/woutervanwijk/>`_, and use it all the time to play music in our office.
 
 Our goal with this project is to make specific improvements to the UI that our users have asked for.
 
@@ -23,7 +23,7 @@ Alternatively, clone the repository and run ``sudo python setup.py install`` fro
 
     $ git clone https://github.com/bardoloi/Mopidy-Headspring-Web
     $ cd Mopidy-Headspring-Web
-    $ sudo python setup.py install
+    $ pip install --editable .
 
 
 Usage
@@ -44,5 +44,5 @@ Changelog
 
 v0.1.0 (5-6-2015)
 ----------------
-- Mirrorred the repo from https://github.com/woutervanwijk/Mopidy-MusicBox-Webclient
+- Mirrorred the repo from https://github.com/woutervanwijk/Mopidy-Headspring-Web
 - New instructions in the read me

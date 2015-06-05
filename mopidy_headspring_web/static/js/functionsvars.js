@@ -1,5 +1,5 @@
 /**
- * @author Wouter van Wijk
+ * @author Headspring Labs
  *
  * all kinds functions and vars
  */
