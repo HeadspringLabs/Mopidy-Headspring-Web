@@ -2,7 +2,7 @@
 Mopidy-Headspring-Web
 *************************
 
-We love the `Mopidy MusicBox Webclient <https://github.com/woutervanwijk/Mopidy-MusicBox-Webclient>`) by `woutervanwijk <https://github.com/woutervanwijk>`, and use it all the time to play music in our office.
+We love the `Mopidy MusicBox Webclient <https://github.com/woutervanwijk/Mopidy-MusicBox-Webclient>`_ by `woutervanwijk <https://github.com/woutervanwijk/>`_, and use it all the time to play music in our office.
 
 Our goal with this project is to make specific improvements to the UI that our users have asked for.
 
