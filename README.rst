@@ -2,6 +2,15 @@
 Mopidy-Headspring-Web
 *************************
 
+.. image:: https://img.shields.io/travis/bardoloi/Mopidy-Headspring-Web/master.svg?style=flat
+    :target: https://travis-ci.org/bardoloi/Mopidy-Headspring-Web
+    :alt: Travis-CI build status
+
+.. image:: https://img.shields.io/coveralls/bardoloi/Mopidy-Headspring-Web/master.svg?style=flat
+   :target: https://coveralls.io/r/bardoloi/Mopidy-Headspring-Web?branch=master
+   :alt: Test coverage
+
+
 We love the `Mopidy MusicBox Webclient <https://github.com/woutervanwijk/Mopidy-MusicBox-Webclient>`_ by `woutervanwijk <https://github.com/woutervanwijk/>`_, and use it all the time to play music in our office.
 
 Our goal with this project is to make specific improvements to the UI that our users have asked for.
