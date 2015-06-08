@@ -191,11 +191,9 @@ function renderSongLi(song, liID, uri, playlistType) {
     songLi = '<li class="song albumli" id="' + liID + '">' +
         '<a href="#" class="moreBtn" onclick="return popupTracks(event, \'' + uri + '\',\'' + song.uri + '\');">' +
         '<i class="fa fa-ellipsis-v"></i>' +
-        '</a>' + '<a href="#" onclick="return ' + playlistType + '(\'' + song.uri + '\',\'' + uri + '\');">' +
-    //        '<h1 class="trackname"><i class="' + iconClass + '"></i> ' + name + '</h1>' +
-    '<h1 class="trackname">' + name + '</h1>' +
+        '</a>' + '<a href="#">' +
+            '<h1 class="trackname">' + name + '</h1>' +
         '</a>' +
-
     '</li>';
     return songLi;
 }
