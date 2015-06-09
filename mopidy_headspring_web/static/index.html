@@ -7,10 +7,13 @@
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css"/>
 <!--    <script type='application/javascript' src='js/fastclick.js'></script> -->
     <script>
-        //configuration
-        var isMusicBox = {{musicbox}}; // Remove MusicBox only content (e.g. settings, system pages)
-        var websocketUrl = '{{websocket_url}}';
-        var hasAlarmClock = {{alarmclock}}; // Add Alarm Clock icons
+     //configuration
+//     var wsLocation = location.host + ':6680';  //for normal operation of mopidy http
+      var wsLocation = location.host;   //for running on port 80
+      if (wsLocation == location.hostname) {
+          wsLocation = location.hostname + ':6680';
+      }
+      var isMusicBox = {{musicbox}}; // Remove MusicBox only content (e.g. settings, system pages)
 
         $(document).bind("mobileinit", function () {
             $.extend($.mobile, {
@@ -54,8 +57,8 @@
 
     <script src="js/jquery.mobile-1.3.2.min.js"></script>
     <meta name="description" content="MusicBox" />
-    <meta name="author" content="Wouter van Wijk" />
-    <meta name="copyright" content="(c) 2012-2015 Wouter van Wijk" />
+    <meta name="author" content="Headspring Labs" />
+    <meta name="copyright" content="(c) 2015 Headspring Labs" />
     <link href="css/webclient.css" rel="stylesheet" />
     <link href="css/jquery.mobile.iscrollview.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
@@ -96,10 +99,6 @@
         <li id="navsearch" data-icon="false">
             <a href="#search" onclick="switchContent('search' ); return false;">
                 <span class="navtxt">Search </span><i class="fa fa-search"></i></a>
-        </li>
-        <li id="navAlarmClock" data-icon="false">
-                <a href="/alarmclock/">
-                <span class="navtxt"> Alarm Clock </span><i class="fa fa-clock-o"></i></a>
         </li>
         <li id="navEnterFullscreen" data-icon="false">
                 <a href="#">
@@ -169,9 +168,6 @@
 <div data-role="popup" data-transition="none" data-theme="c" id="popupTracks">
     <div data-role="collapsible-set">
         <ul data-role="listview" data-icon="false" id="popupTracksLv">
-            <li>
-                <a href="#" onclick="return playTrack(PLAY_NOW);">Play <span class="popupTrackName"></span></a>
-            </li>
             <li class="addqueue">
                 <a href="#" onclick="return playTrack(PLAY_NEXT);">Play Track Next</a>
             </li>
@@ -271,20 +267,14 @@
                 <h4>Search</h4>
             </div>
         </a>
-        <a id="homeAlarmClock" href="/alarmclock/">
-            <div class="ui-block-a">
-                <i class="fa fa-clock-o"></i>
-                <h4>Alarm Clock</h4>
-            </div>
-        </a>
         <a id="homesettings" href="/settings/">
-            <div class="ui-block-b">
+            <div class="ui-block-a">
                 <i class="fa fa-gear"></i>
                 <h4>Settings</h4>
             </div>
         </a>
         <a id="homeshutdown" href="system.html">
-            <div class="ui-block-a">
+            <div class="ui-block-b">
                 <i class="fa fa-power-off"></i>
                 <h4>System</h4>
             </div>
@@ -311,6 +301,7 @@
         <label for="trackslider" disabled="disabled" class="ui-hidden-accessible">Position</label>
         <input id="trackslider" name="trackslider" data-mini="true" type="range" onchange="doSeekPos(this.value);" />
     </div>
+
 </div>
 <!-- /nowplaying -->
 
@@ -334,9 +325,7 @@
 <!--/browsepane-->
 
 <div data-role="content" class="pane" id="currentpane">
-    <a style="float:right" onclick="return clearQueue();" data-role="button">Clear</a><h4>Play Queue</h4>
-    <!--                <ul data-role="listview" data-icon="false" data-theme="d" data-inset="true" id="currenttable"></ul>
-                    <ul data-role="listview" data-icon="false" data-theme="d" data-inset="true" id="currenttable"></ul> -->
+    <h4>Play Queue</h4>
     <ul class="table" id="currenttable"></ul>
 </div>
 
@@ -410,11 +399,10 @@
         <form>
         <div class="ui-grid-a pl-breakpoint">
         <div class="ui-block-a" style="padding: 5px">
-            <p>Select a service and add an url of a stream that you want to listen.
+            <p>Add an url of a stream that you want to listen to in the box below. You can add uri's for Spotify, SoundCloud, YouTube, Podcasts.
                 <select id="selectstreamservice" data-native-menu="true">
                     <option value="">Internet Radio (mp3, m3u, asx, etc)</option>
                     <option value="yt">YouTube</option>
-                    <option value="gs">Grooveshark</option>
                     <option value="">Spotify Uri</option>
                     <option value="sc">SoundCloud</option>
                     <option value="podcast">Podcast</option>
@@ -426,7 +414,8 @@
                     Play
                 </button>
 
-            <p>Put in a name and hit the Save button to save the stream in your browser (not on the server yet). <!-- To find stations, use the Browse function with extensions like Dirble or TuneIn, the right values will appear in these boxes automatically. Or use websites like <a href="http://www.listenlive.eu/" target="_blank">Listenlive</a> or <a
+            <p>Put in a name and hit the Save button to save the url (locally, in the browser not
+                on the server yet). <!-- To find stations, use the Browse function with extensions like Dirble or TuneIn, the right values will appear in these boxes automatically. Or use websites like <a href="http://www.listenlive.eu/" target="_blank">Listenlive</a> or <a
                         href="http://www.dirble.com/" target="_blank">Dirble</a>.</p> -->
 
                 <input id="streamnameinput" placeholder="Name" class="span2" data-clear-btn="true"
@@ -435,7 +424,7 @@
                     Save
                 </button>
                 <br/>
-                <button class="btn" type="button" onclick="$('#streamuriinput').val(songdata.track.uri); return true;">
+                <button class="btn" type="button" onclick="$('#streamuriinput').val(songdata.uri); return true;">
                     Add currently playing url
                 </button>
             </form>

@@ -9,8 +9,8 @@ __version__ = '2.0.0'
 
 class MusicBoxExtension(ext.Extension):
 
-    dist_name = 'Mopidy-MusicBox-Webclient'
-    ext_name = 'musicbox_webclient'
+    dist_name = 'Mopidy-Headspring-Web'
+    ext_name = 'headspring_web'
     version = __version__
 
     def get_default_config(self):
