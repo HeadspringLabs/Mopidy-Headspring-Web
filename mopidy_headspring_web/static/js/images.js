@@ -1,5 +1,5 @@
 /**
- * @author Wouter van Wijk
+ * @author Headspring Labs
  */
 
 API_KEY= 'b6d34c3af91d62ab0ae00ab1b6fa8733';

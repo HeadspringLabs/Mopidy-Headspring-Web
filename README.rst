@@ -32,7 +32,7 @@ Alternatively, clone the repository and run ``sudo python setup.py install`` fro
 
     $ git clone https://github.com/bardoloi/Mopidy-Headspring-Web
     $ cd Mopidy-Headspring-Web
-    $ sudo python setup.py install
+    $ pip install --editable .
 
 
 Usage

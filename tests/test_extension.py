@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 
-from mopidy_musicbox_webclient import MusicBoxExtension
+from mopidy_headspring_web import MusicBoxExtension
 
 
 def test_get_default_config():
@@ -8,7 +8,7 @@ def test_get_default_config():
 
     config = ext.get_default_config()
 
-    assert '[musicbox_webclient]' in config
+    assert '[headspring_web]' in config
     assert 'enabled = true' in config
 
 

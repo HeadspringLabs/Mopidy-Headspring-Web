@@ -12,13 +12,13 @@ def get_version(filename):
 
 
 setup(
-    name='Mopidy-MusicBox-Webclient',
-    version=get_version('mopidy_musicbox_webclient/__init__.py'),
-    url='https://github.com/woutervanwijk/mopidy-musicbox-webclient',
+    name='Mopidy-Headspring-Web',
+    version=get_version('mopidy_headspring_web/__init__.py'),
+    url='https://github.com/bardoloi/Mopidy-Headspring-Web',
     license='Apache License, Version 2.0',
-    author='Wouter van Wijk',
-    author_email='woutervanwijk@gmail.com',
-    description='Mopidy MusicBox web extension',
+    author='Headspring Labs',
+    author_email='labs@headspring.com',
+    description='Mopidy Headspring Web extension',
     long_description=open('README.rst').read(),
     packages=find_packages(exclude=['tests', 'tests.*']),
     zip_safe=False,
@@ -29,7 +29,7 @@ setup(
     ],
     entry_points={
         'mopidy.ext': [
-            'musicbox_webclient = mopidy_musicbox_webclient:MusicBoxExtension',
+            'headspring_web = mopidy_headspring_web:MusicBoxExtension',
         ],
     },
     classifiers=[
