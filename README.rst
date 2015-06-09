@@ -2,12 +2,12 @@
 Mopidy-Headspring-Web
 *************************
 
-.. image:: https://img.shields.io/travis/bardoloi/Mopidy-Headspring-Web/master.svg?style=flat
-    :target: https://travis-ci.org/headspringlabs/Mopidy-Headspring-Web
+.. image:: https://img.shields.io/travis/HeadspringLabs/Mopidy-Headspring-Web/master.svg?style=flat
+    :target: https://travis-ci.org/HeadspringLabs/Mopidy-Headspring-Web
     :alt: Travis-CI build status
 
-.. image:: https://img.shields.io/coveralls/bardoloi/Mopidy-Headspring-Web/master.svg?style=flat
-   :target: https://coveralls.io/r/headspringlabs/Mopidy-Headspring-Web?branch=master
+.. image:: https://img.shields.io/coveralls/HeadspringLabs/Mopidy-Headspring-Web/master.svg?style=flat
+   :target: https://coveralls.io/r/HeadspringLabs/Mopidy-Headspring-Web?branch=master
    :alt: Test coverage
 
 
