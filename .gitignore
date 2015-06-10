@@ -17,3 +17,5 @@ nosetests.xml
 .project
 *.pbxproj
 *.egg-info
+*.log
+**tracklist_backup.json

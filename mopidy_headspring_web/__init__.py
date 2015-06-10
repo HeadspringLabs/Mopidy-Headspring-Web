@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 import os
 
-from mopidy import ext
+from mopidy import config, ext
 
 __version__ = '2.0.0'
 
@@ -11,6 +11,10 @@ class MusicBoxExtension(ext.Extension):
     dist_name = 'Mopidy-Headspring-Web'
     ext_name = 'headspring_web'
     version = __version__
+
+    def get_default_config(self):
+        conf_file = os.path.join(os.path.dirname(__file__), 'ext.conf')
+        return config.read(conf_file)
 
     def setup(self, registry):
         registry.add('http:static', {
