@@ -3,19 +3,8 @@ var dest = './static',
   mui = './node_modules/material-ui/src';
 
 module.exports = {
-  // browserSync: {
-  //   server: {
-  //     // We're serving the src folder as well
-  //     // for sass sourcemap linking
-  //     baseDir: [dest, src]
-  //   },
-  //   files: [
-  //     dest + '/**'
-  //   ]
-  // },
-  markup: {
-    src: src + "/client/**",
-    dest: dest
+  watch: {
+    src: src + "/app/**"
   },
   browserify: {
     // Enable source maps

@@ -15,11 +15,8 @@ var source       = require('vinyl-source-stream');
 var config       = require('../config').browserify;
 
 gulp.task('browserify', function(callback) {
-
   var bundleQueue = config.bundleConfigs.length;
-
   var browserifyThis = function(bundleConfig) {
-
     var bundler = browserify({
       // Required watchify args
       cache: {}, packageCache: {}, fullPaths: false,
