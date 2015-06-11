@@ -19,3 +19,4 @@ nosetests.xml
 *.egg-info
 *.log
 **tracklist_backup.json
+**app.js

@@ -1,5 +1,5 @@
 var dest = './static',
-  src = './static',
+  src = '.',
   mui = './node_modules/material-ui/src';
 
 module.exports = {
