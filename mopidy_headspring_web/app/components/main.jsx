@@ -4,7 +4,9 @@ var React = require('react');
 var mui = require('material-ui');
 var ThemeManager = new mui.Styles.ThemeManager();
 var Colors = mui.Styles.Colors;
+var { AppCanvas } = mui;
 var MainBar = require('./main-bar.jsx');
+var Queue = require('./queue.jsx');
 
 var Main = React.createClass({
   childContextTypes: {
@@ -20,7 +22,10 @@ var Main = React.createClass({
   },
   render: function() {
     return (
-      <MainBar/>
+      <AppCanvas>
+        <MainBar/>
+        <Queue/>
+      </AppCanvas>
     );
   },
 });
