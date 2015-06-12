@@ -25,7 +25,7 @@ Installation
 
 Clone the repository and run ``sudo python setup.py install`` from within the project directory. e.g. ::
 
-    $ git clone https://github.com/bardoloi/Mopidy-Headspring-Web
+    $ git clone https://github.com/HeadspringLabs/Mopidy-Headspring-Web
     $ cd Mopidy-Headspring-Web
     $ pip install --editable .
 
