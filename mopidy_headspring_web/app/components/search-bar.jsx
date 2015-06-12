@@ -1,19 +1,13 @@
 var React = require('react');
 
-var QueueItem = React.createClass({
+var SearchBar = React.createClass({
   render: function() {
     var styles = this.getStyles();
   	return (
-      <div>
-        <div style={styles.col1}>
-        	<i className="fa fa-music fa-3x"></i>
-        </div>
-        <div style={styles.col2}>
-          <h2> Song Title Here</h2>
-          <h4>Artist name here</h4>
-          <h4>Album name here</h4>
-        </div>
-      </div>
+      <span>
+        <input type="text" />
+        <i className="fa fa-search"></i>
+      </span>
     );
   },
   getStyles: function() {
@@ -30,4 +24,4 @@ var QueueItem = React.createClass({
     return styles;
   },
 });
-module.exports = QueueItem;
+module.exports = SearchBar;
