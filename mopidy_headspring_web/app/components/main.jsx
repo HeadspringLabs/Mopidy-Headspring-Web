@@ -6,7 +6,7 @@ var ThemeManager = new mui.Styles.ThemeManager();
 var Colors = mui.Styles.Colors;
 var { AppCanvas } = mui;
 var MainBar = require('./main-bar.jsx');
-var Queue = require('./queue.jsx');
+var QueuePaper = require('./queue-paper.jsx');
 
 var Main = React.createClass({
   childContextTypes: {
@@ -24,7 +24,7 @@ var Main = React.createClass({
     return (
       <AppCanvas>
         <MainBar/>
-        <Queue/>
+        <QueuePaper/>
       </AppCanvas>
     );
   },
