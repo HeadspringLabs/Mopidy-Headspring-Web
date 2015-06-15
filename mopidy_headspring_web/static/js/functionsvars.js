@@ -265,7 +265,7 @@ function resultsToTables(results, target, uri) {
                     html += '<li class="song albumli" id="' + targetmin + '-' + newalbum[0].uri + '">' +
                         '<a href="#" class="moreBtn" onclick="return popupTracks(event, \'' + uri + '\',\'' + newalbum[0].uri + '\');">' +
                         '<i class="fa fa-ellipsis-v"></i></a>' +
-                        '<a href="#" onclick="return ' + playlistType + '(\'' + newalbum[0].uri + '\',\'' + uri + '\');">' +
+                        '<a href="#" >' +
                         '<h1><i class="' + iconClass + '"></i> ' + newalbum[0].name + "</h1><p>";
                     /*                 '<span style="float: right;">' + timeFromSeconds(newalbum[0].length / 1000) + '</span>'; */
                     if (newalbum[0].artists) {
