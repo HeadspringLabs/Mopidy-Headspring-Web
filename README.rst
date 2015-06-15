@@ -23,11 +23,9 @@ This is a responsive webclient especially written for Mopidy, a music server. Re
 Installation
 ============
 
-Clone the repository and run ``sudo python setup.py install`` from within the project directory. e.g. ::
+Run ``sudo python setup.py install`` from within the project directory. e.g. ::
 
-    $ git clone https://github.com/HeadspringLabs/Mopidy-Headspring-Web
-    $ cd Mopidy-Headspring-Web
-    $ pip install --editable .
+    $ pip install Mopidy-Headspring-Web
 
 
 Usage
