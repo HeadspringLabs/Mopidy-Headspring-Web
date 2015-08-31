@@ -519,13 +519,13 @@ function playStreamUri(uri) {
     if (isServiceUri(nwuri) || isStreamUri(nwuri) || validUri(nwuri)) {
         toast('Playing...');
         //stop directly, for user feedback
-        mopidy.playback.stop();
         //hide ios/android keyboard
         document.activeElement.blur();
         $("input").blur();
-        clearQueue();
         mopidy.tracklist.add(null, null, nwuri);
-        mopidy.playback.play();
+        if(mopidy.playback.getState() == 'b'){
+            mopidy.playback.play();
+        }
     } else {
         toast('No valid url!');
     }

@@ -17,7 +17,7 @@ setup(
     url='https://github.com/bardoloi/Mopidy-Headspring-Web',
     license='Apache License, Version 2.0',
     author='Headspring Labs',
-    author_email='labs@headspring.com',
+    author_email='vishal.bardoloi@headspring.com',
     description='Mopidy Headspring Web extension',
     long_description=open('README.rst').read(),
     packages=find_packages(exclude=['tests', 'tests.*']),
